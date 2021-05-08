@@ -1,6 +1,12 @@
 # coding: utf-8
 #
+"""
+Progressive Layered Extraction (PLE): A Novel Multi-Task Learning (MTL) Model for Personalized Recommendations
 
+Copyright (c) 2021 boostAgent, Inc
+Licensed under the MIT License (see LICENSE for details)
+Written by scalaboy keith
+"""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
