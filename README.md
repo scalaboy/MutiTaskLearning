@@ -13,7 +13,9 @@ https://github.com/drawbridge/keras-mmoe
 
 
 如何开始？
+
 1、pip insall -r requirements.txt
 说明：我这个代码是兼容tensorflow1.x的。我本身的版本是tensorflow 2.x
+
 2、 python train_ple.py 
 just run !
