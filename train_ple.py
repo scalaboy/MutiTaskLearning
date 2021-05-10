@@ -21,6 +21,7 @@ from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.callbacks import Callback
 from sklearn.metrics import roc_auc_score
 from ple import Mmof_3loss
+from PCGrad_tf import PCGrad
 
 from mmoe import MMoE
 
@@ -212,7 +213,9 @@ def main():
     print('',)
     # Compile model
     model = Model(inputs=input_layer, outputs=output_layers)
-    adam_optimizer = Adam()
+    #adam_optimizer = Adam()
+    #change by guanqi
+    adam_optimizer = PCGrad(tf.train.AdamOptimizer())
     model.compile(
         loss={'income': 'binary_crossentropy', 'marital': 'binary_crossentropy'},
         optimizer=adam_optimizer,

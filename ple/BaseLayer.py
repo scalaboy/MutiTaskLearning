@@ -84,8 +84,8 @@ class CGCLayer(tf.keras.layers.Layer):
             #weighted_expert_output = expert_outputs * tf.keras.backend.repeat_elements(expanded_gate_output, self.units, axis=1)
             if(i<self.units-1):
                 expert_unit = int(expert_outputs[i].get_shape().as_list()[-1])
-                print('====self.units : {}th expert_outputs, expert_outputs[i] {}'.format(self.units, expert_outputs[i].get_shape()))
-                print('====expert_unit : {}th expert_outputs, expert_outputs {}'.format(expert_unit,expert_outputs.get_shape()))
+                #print('====self.units : {}th expert_outputs, expert_outputs[i] {}'.format(self.units, expert_outputs[i].get_shape()))
+                #print('====expert_unit : {}th expert_outputs, expert_outputs {}'.format(expert_unit,expert_outputs.get_shape()))
                 weighted_expert_output = expert_outputs[i] * tf.keras.backend.repeat_elements(expanded_gate_output, self.units, axis=1)
                 weighted_expert_output_next = expert_outputs[i+1] * tf.keras.backend.repeat_elements(expanded_gate_output,self.units, axis=1)
             else:
